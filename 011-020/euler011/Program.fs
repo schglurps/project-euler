@@ -118,4 +118,4 @@ let main argv =
     |> Seq.max
     |> printfn "%i"
 
-    0 // return an integer exit code
+    0
