@@ -104,13 +104,11 @@ open System.IO
 
 [<EntryPoint>]
 let main argv =
-    let lines = File.ReadAllLines "input.txt"
-    let l: int list = []
 
     let zero = int '0'
     let charToInt c = int c - zero
 
-    let rec numberToDigits n =
+    let numberToDigits n =
         let rec inner n =
             if n < 10 then
                 [n]
@@ -120,7 +118,10 @@ let main argv =
 
         inner n |> List.rev
 
-    (lines.[0].Length - 1, 0, l) // (Column index, remainder, digits)
+    let lines = File.ReadAllLines "input.txt"
+    let emptyList: int list = List.empty
+
+    (lines.[0].Length - 1, 0, emptyList) // (Column index, remainder, digits)
     |> Seq.unfold (fun state ->
         let (index, remainder, digits) = state
         if index = -1 then
