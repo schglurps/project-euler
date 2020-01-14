@@ -18,7 +18,7 @@ open System.Collections.Generic
 [<EntryPoint>]
 let main argv =
 
-    let rec collatzLength =
+    let collatzLength =
         let cache = new Dictionary<int64, int>()
 
         let rec innerCollatzLength n =
