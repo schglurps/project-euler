@@ -13,14 +13,31 @@
 
 // NOTE: Once the chain starts the terms are allowed to go above one million.
 
+open System.Collections.Generic
+
 [<EntryPoint>]
 let main argv =
 
-    let rec collatzLength (n: int64) =
-        match n with
-        | 1L -> 1
-        | n when n % 2L = 0L -> 1 + (collatzLength (n / 2L))
-        | n -> 1 + (collatzLength (3L * n + 1L))
+    let rec collatzLength =
+        let cache = new Dictionary<int64, int>()
+
+        let rec innerCollatzLength n =
+            let (found, length) = cache.TryGetValue n
+            if found then
+                length
+            else
+                match n with
+                | 1L -> 1
+                | n when n % 2L = 0L ->
+                    let result = 1 + (innerCollatzLength (n / 2L))
+                    cache.Add(n, result)
+                    result
+                | n ->
+                    let result = 1 + (innerCollatzLength (3L * n + 1L))
+                    cache.Add(n, result)
+                    result
+
+        innerCollatzLength
 
     seq { 1L .. 999999L }
     |> Seq.maxBy collatzLength
