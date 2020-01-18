@@ -32,11 +32,11 @@ let main argv =
                 sprintf "%s-%s" (tensMap.TryFind tens |> Option.get) (toLetters units)
         | n when number < 1000 ->
             let hundreds = n / 100
-            let units = n % 100
-            if units = 0 then
+            let remainder = n % 100
+            if remainder = 0 then
                 sprintf "%s hundred" (firstNumbersMap.TryFind hundreds |> Option.get)
             else
-                sprintf "%s hundred and %s" (firstNumbersMap.TryFind hundreds |> Option.get) (toLetters units)
+                sprintf "%s hundred and %s" (firstNumbersMap.TryFind hundreds |> Option.get) (toLetters remainder)
         | _ -> "one thousand"
 
     let withoutSpaceAndHyphen s =
