@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.26124.0
 MinimumVisualStudioVersion = 15.0.26124.0
 Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "euler021", "euler021\euler021.fsproj", "{0531E285-5AF2-4EC3-82DF-7036C5BC7DB6}"
 EndProject
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "euler022", "euler022\euler022.fsproj", "{C7E98622-4CEE-44CF-A76A-DD2A0BAFB773}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -30,5 +32,17 @@ Global
 		{0531E285-5AF2-4EC3-82DF-7036C5BC7DB6}.Release|x64.Build.0 = Release|Any CPU
 		{0531E285-5AF2-4EC3-82DF-7036C5BC7DB6}.Release|x86.ActiveCfg = Release|Any CPU
 		{0531E285-5AF2-4EC3-82DF-7036C5BC7DB6}.Release|x86.Build.0 = Release|Any CPU
+		{C7E98622-4CEE-44CF-A76A-DD2A0BAFB773}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C7E98622-4CEE-44CF-A76A-DD2A0BAFB773}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C7E98622-4CEE-44CF-A76A-DD2A0BAFB773}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{C7E98622-4CEE-44CF-A76A-DD2A0BAFB773}.Debug|x64.Build.0 = Debug|Any CPU
+		{C7E98622-4CEE-44CF-A76A-DD2A0BAFB773}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{C7E98622-4CEE-44CF-A76A-DD2A0BAFB773}.Debug|x86.Build.0 = Debug|Any CPU
+		{C7E98622-4CEE-44CF-A76A-DD2A0BAFB773}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C7E98622-4CEE-44CF-A76A-DD2A0BAFB773}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C7E98622-4CEE-44CF-A76A-DD2A0BAFB773}.Release|x64.ActiveCfg = Release|Any CPU
+		{C7E98622-4CEE-44CF-A76A-DD2A0BAFB773}.Release|x64.Build.0 = Release|Any CPU
+		{C7E98622-4CEE-44CF-A76A-DD2A0BAFB773}.Release|x86.ActiveCfg = Release|Any CPU
+		{C7E98622-4CEE-44CF-A76A-DD2A0BAFB773}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
