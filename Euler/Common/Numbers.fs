@@ -35,3 +35,14 @@ module Numbers =
             while stack.Count > 0 do
                 yield stack.Pop()
         }
+
+    let rec toReversedDigits number =
+        seq {
+            if number < 10 then
+                yield number
+            else
+                let quotient = number / 10
+                let remainder = number % 10
+                yield remainder
+                yield! toReversedDigits quotient
+        }
